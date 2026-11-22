@@ -1,0 +1,296 @@
+{
+  "id": "oathbreaker",
+  "categories": [
+    "models"
+  ],
+  "name": "Oathbreaker",
+  "description": "OpenClaw provider plugin for Oathbreaker's abliterated GLM, DeepSeek and Kimi models.",
+  "activation": {
+    "onStartup": false
+  },
+  "enabledByDefault": true,
+  "providers": [
+    "oathbreaker"
+  ],
+  "setup": {
+    "providers": [
+      {
+        "id": "oathbreaker",
+        "envVars": [
+          "OATHBREAKER_API_KEY"
+        ]
+      }
+    ]
+  },
+  "providerAuthChoices": [
+    {
+      "provider": "oathbreaker",
+      "method": "api-key",
+      "choiceId": "oathbreaker-api-key",
+      "appGuidedSecret": true,
+      "choiceLabel": "Oathbreaker API key",
+      "choiceHint": "OpenAI-compatible abliterated GLM, DeepSeek and Kimi models",
+      "groupId": "oathbreaker",
+      "groupLabel": "Oathbreaker",
+      "groupHint": "OpenAI-compatible abliterated GLM, DeepSeek and Kimi models",
+      "optionKey": "oathbreakerApiKey",
+      "cliFlag": "--oathbreaker-api-key",
+      "cliOption": "--oathbreaker-api-key <key>",
+      "cliDescription": "Oathbreaker API key"
+    }
+  ],
+  "modelCatalog": {
+    "providers": {
+      "oathbreaker": {
+        "baseUrl": "https://oathbreaker.ai/v1",
+        "api": "openai-completions",
+        "defaultModel": "oathbreaker-glm-5.3",
+        "models": [
+          {
+            "id": "oathbreaker-glm-5.3",
+            "name": "GLM-5.3 Abliterated",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 131072,
+            "maxTokens": 32768,
+            "cost": {
+              "input": 3,
+              "output": 4,
+              "cacheRead": 0.3,
+              "cacheWrite": 0
+            },
+            "compat": {
+              "supportsStore": false,
+              "supportsPromptCacheKey": false,
+              "supportsUsageInStreaming": true,
+              "supportsDeveloperRole": false,
+              "supportsStrictMode": false,
+              "supportsReasoningEffort": true,
+              "maxTokensField": "max_tokens",
+              "thinkingFormat": "openai",
+              "supportedReasoningEfforts": [
+                "low",
+                "high",
+                "max"
+              ],
+              "reasoningEffortMap": {
+                "off": "low",
+                "minimal": "low",
+                "low": "low",
+                "medium": "low",
+                "high": "high",
+                "xhigh": "high",
+                "max": "max"
+              },
+              "defaultThinkingLevel": "low",
+              "thinkingLevels": [
+                "low",
+                "high",
+                "max"
+              ],
+              "supportsLongCacheRetention": false
+            }
+          },
+          {
+            "id": "oathbreaker-glm-5.3-flash",
+            "name": "GLM-5.3 Flash Abliterated",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 131072,
+            "maxTokens": 32768,
+            "cost": {
+              "input": 0.4,
+              "output": 1.2,
+              "cacheRead": 0.05,
+              "cacheWrite": 0
+            },
+            "compat": {
+              "supportsStore": false,
+              "supportsPromptCacheKey": false,
+              "supportsUsageInStreaming": true,
+              "supportsDeveloperRole": false,
+              "supportsStrictMode": false,
+              "supportsReasoningEffort": true,
+              "maxTokensField": "max_tokens",
+              "thinkingFormat": "openai",
+              "supportedReasoningEfforts": [
+                "low",
+                "high",
+                "max"
+              ],
+              "reasoningEffortMap": {
+                "off": "low",
+                "minimal": "low",
+                "low": "low",
+                "medium": "low",
+                "high": "high",
+                "xhigh": "high",
+                "max": "max"
+              },
+              "defaultThinkingLevel": "low",
+              "thinkingLevels": [
+                "low",
+                "high",
+                "max"
+              ],
+              "supportsLongCacheRetention": false
+            }
+          },
+          {
+            "id": "oathbreaker-deepseek-v4.1-flash",
+            "name": "DeepSeek V4.1 Flash Abliterated",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 32768,
+            "maxTokens": 32768,
+            "cost": {
+              "input": 0.4,
+              "output": 1.2,
+              "cacheRead": 0.05,
+              "cacheWrite": 0
+            },
+            "compat": {
+              "supportsStore": false,
+              "supportsPromptCacheKey": false,
+              "supportsUsageInStreaming": true,
+              "supportsDeveloperRole": false,
+              "supportsStrictMode": false,
+              "supportsReasoningEffort": true,
+              "maxTokensField": "max_tokens",
+              "thinkingFormat": "openai",
+              "supportedReasoningEfforts": [
+                "low",
+                "high",
+                "max"
+              ],
+              "reasoningEffortMap": {
+                "off": "low",
+                "minimal": "low",
+                "low": "low",
+                "medium": "low",
+                "high": "high",
+                "xhigh": "high",
+                "max": "max"
+              },
+              "defaultThinkingLevel": "low",
+              "thinkingLevels": [
+                "low",
+                "high",
+                "max"
+              ],
+              "supportsLongCacheRetention": false
+            }
+          },
+          {
+            "id": "oathbreaker-deepseek-v4.1-flash-fast",
+            "name": "DeepSeek V4.1 Flash Fast Abliterated",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 32768,
+            "maxTokens": 32768,
+            "cost": {
+              "input": 0.5,
+              "output": 1.5,
+              "cacheRead": 0.05,
+              "cacheWrite": 0
+            },
+            "compat": {
+              "supportsStore": false,
+              "supportsPromptCacheKey": false,
+              "supportsUsageInStreaming": true,
+              "supportsDeveloperRole": false,
+              "supportsStrictMode": false,
+              "supportsReasoningEffort": true,
+              "maxTokensField": "max_tokens",
+              "thinkingFormat": "openai",
+              "supportedReasoningEfforts": [
+                "low",
+                "high",
+                "max"
+              ],
+              "reasoningEffortMap": {
+                "off": "low",
+                "minimal": "low",
+                "low": "low",
+                "medium": "low",
+                "high": "high",
+                "xhigh": "high",
+                "max": "max"
+              },
+              "defaultThinkingLevel": "low",
+              "thinkingLevels": [
+                "low",
+                "high",
+                "max"
+              ],
+              "supportsLongCacheRetention": false
+            }
+          },
+          {
+            "id": "oathbreaker-kimi-k3.1-pro",
+            "name": "Kimi K3.1 Pro Abliterated",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "contextWindow": 32768,
+            "maxTokens": 24576,
+            "cost": {
+              "input": 4.5,
+              "output": 9,
+              "cacheRead": 0.45,
+              "cacheWrite": 0
+            },
+            "compat": {
+              "supportsStore": false,
+              "supportsPromptCacheKey": false,
+              "supportsUsageInStreaming": true,
+              "supportsDeveloperRole": false,
+              "supportsStrictMode": false,
+              "supportsReasoningEffort": true,
+              "maxTokensField": "max_tokens",
+              "thinkingFormat": "openai",
+              "supportedReasoningEfforts": [
+                "low",
+                "high",
+                "max"
+              ],
+              "reasoningEffortMap": {
+                "off": "low",
+                "minimal": "low",
+                "low": "low",
+                "medium": "low",
+                "high": "high",
+                "xhigh": "high",
+                "max": "max"
+              },
+              "defaultThinkingLevel": "low",
+              "thinkingLevels": [
+                "low",
+                "high",
+                "max"
+              ],
+              "supportsLongCacheRetention": false
+            }
+          }
+        ]
+      }
+    },
+    "discovery": {
+      "oathbreaker": "static"
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}

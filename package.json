@@ -1,0 +1,56 @@
+{
+  "name": "openclaw-oathbreaker",
+  "version": "2026.11.21",
+  "description": "OpenClaw provider plugin for Oathbreaker's abliterated GLM, DeepSeek and Kimi models.",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "oathbreaker",
+    "llm",
+    "provider"
+  ],
+  "homepage": "https://oathbreaker.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jIrwinCline/openclaw-oathbreaker"
+  },
+  "files": [
+    "index.js",
+    "models.js",
+    "openclaw.plugin.json",
+    "README.md",
+    "LICENSE",
+    "assets/icon.png",
+    "assets/activity.svg"
+  ],
+  "scripts": {
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.11.6"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "openclaw": "2026.11.6",
+    "vitest": "^3.2.4"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.11.6",
+      "minGatewayVersion": "2026.11.6"
+    },
+    "build": {
+      "openclawVersion": "2026.11.6",
+      "pluginSdkVersion": "2026.11.6"
+    }
+  }
+}
