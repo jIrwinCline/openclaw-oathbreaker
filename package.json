@@ -1,6 +1,6 @@
 {
   "name": "openclaw-oathbreaker",
-  "version": "2026.11.21",
+  "version": "2026.11.23",
   "description": "OpenClaw provider plugin for Oathbreaker's abliterated GLM, DeepSeek and Kimi models.",
   "license": "MIT",
   "type": "module",
@@ -9,7 +9,12 @@
     "openclaw-plugin",
     "oathbreaker",
     "llm",
-    "provider"
+    "provider",
+    "abliterated",
+    "openai-compatible",
+    "glm",
+    "deepseek",
+    "kimi"
   ],
   "homepage": "https://oathbreaker.ai",
   "repository": {
