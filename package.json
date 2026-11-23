@@ -9,7 +9,12 @@
     "openclaw-plugin",
     "oathbreaker",
     "llm",
-    "provider"
+    "provider",
+    "abliterated",
+    "openai-compatible",
+    "glm",
+    "deepseek",
+    "kimi"
   ],
   "homepage": "https://oathbreaker.ai",
   "repository": {

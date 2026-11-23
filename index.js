@@ -19,7 +19,7 @@ export default defineSingleProviderPluginEntry({
   manifest,
   provider: {
     label: "Oathbreaker",
-    docsPath: "https://oathbreaker.ai/docs",
+    docsPath: "https://oathbreaker.ai/agents/openclaw",
     envVars: ["OATHBREAKER_API_KEY"],
     manifestAuth: {
       defaultModel: OATHBREAKER_DEFAULT_MODEL_REF,

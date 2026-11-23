@@ -2,6 +2,8 @@
 
 Use [Oathbreaker](https://oathbreaker.ai) models in [OpenClaw](https://openclaw.ai). Oathbreaker serves abliterated GLM-5.3, DeepSeek V4.1 Flash and Kimi K3.1 Pro through an OpenAI-compatible Chat Completions API with prepaid credit.
 
+Step-by-step guide with model picks and fixes: [Use abliterated models in OpenClaw](https://oathbreaker.ai/agents/openclaw).
+
 ## Install
 
 ```bash
@@ -14,7 +16,7 @@ If ClawHub does not list the package yet, install it from npm:
 openclaw plugins install npm:openclaw-oathbreaker
 ```
 
-Then sign in. Create an API key and add credit at [oathbreaker.ai](https://oathbreaker.ai), and paste the key in the Models page of the Control UI or run:
+Then sign in. [Create an account](https://oathbreaker.ai/sign-up), add credit and create an API key, and paste the key in the Models page of the Control UI or run:
 
 ```bash
 openclaw onboard --auth-choice oathbreaker-api-key
@@ -59,7 +61,7 @@ Chat Completions tools, `tool_choice` and streamed tool calls work on all five m
 
 ## Troubleshooting
 
-`401` means the key is wrong or revoked. An insufficient-credit error means your prepaid balance is empty. A `context_limit` error on DeepSeek or Kimi means the conversation outgrew the byte budget; run `/compact` or switch to a GLM model. Requests can run up to ten minutes; a client timeout does not prove generation stopped, so check usage in your account before you retry.
+`401` means the key is wrong or revoked. An insufficient-credit error means your prepaid balance is empty. A `context_limit` error on DeepSeek or Kimi means the conversation outgrew the byte budget; run `/compact` or switch to a GLM model. Requests can run up to ten minutes; a client timeout does not prove generation stopped, so check usage in your account before you retry. More fixes are in the [OpenClaw setup guide](https://oathbreaker.ai/agents/openclaw#limits) and the [API error reference](https://oathbreaker.ai/docs#errors).
 
 ## Development
 
